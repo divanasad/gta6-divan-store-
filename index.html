@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIVAN VI | Official GTA VI Fan Store & Experience</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,700;0,900;1,900&family=Pinyon+Script&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        vice: {
+                            pink: '#ff007f',
+                            purple: '#9d00ff',
+                            cyan: '#00f0ff',
+                            yellow: '#ffdc00',
+                            dark: '#0a051b',
+                            card: '#150a2a',
+                            glass: 'rgba(21, 10, 42, 0.75)'
+                        }
+                    },
+                    fontFamily: {
+                        gtatitle: ['Montserrat', 'sans-serif'],
+                        gtacursive: ['Pinyon Script', 'cursive']
+                    },
+                    boxShadow: {
+                        'neon-pink': '0 0 20px rgba(255, 0, 127, 0.6)',
+                        'neon-cyan': '0 0 20px rgba(0, 240, 255, 0.6)',
+                        'neon-purple': '0 0 25px rgba(157, 0, 255, 0.5)'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0a051b;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(180deg, #ff007f, #00f0ff);
+            border-radius: 4px;
+        }
+        .text-glow-pink {
+            text-shadow: 0 0 10px #ff007f, 0 0 20px #ff007f, 0 0 40px #ff007f;
+        }
+        .text-glow-cyan {
+            text-shadow: 0 0 10px #00f0ff, 0 0 20px #00f0ff, 0 0 40px #00f0ff;
+        }
+        .glass-card {
+            background: rgba(25, 12, 48, 0.65);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 0, 127, 0.25);
+        }
+        .glass-card:hover {
+            border-color: rgba(0, 240, 255, 0.6);
+            box-shadow: 0 0 25px rgba(0, 240, 255, 0.3);
+        }
+        .bg-grid-pattern {
+            background-image: linear-gradient(to right, rgba(255, 0, 127, 0.08) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(0, 240, 255, 0.08) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+        @keyframes pulseGlow {
+            0%, 100% { opacity: 0.8; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.03); }
+        }
+        .animate-pulse-glow {
+            animation: pulseGlow 3s infinite ease-in-out;
+        }
+    </style>
+</head>
+<body class="bg-vice-dark text-white font-gtatitle min-h-screen flex flex-col bg-grid-pattern selection:bg-vice-pink selection:text-white">
+
+    <div class="bg-gradient-to-r from-vice-pink via-vice-purple to-vice-cyan text-black py-2 px-4 text-xs md:text-sm font-bold tracking-wider uppercase text-center shadow-lg relative z-50 flex flex-wrap justify-between items-center max-w-7xl mx-auto w-full rounded-b-xl">
+        <div class="flex items-center space-x-2 mx-auto sm:mx-0">
+            <span class="bg-black text-vice-yellow px-2 py-0.5 rounded text-[10px] uppercase font-black animate-pulse">DIVAN VI Official</span>
+            <span>Vice City Fan Merchandise & Exclusive Game Keys</span>
+        </div>
+        <div class="flex items-center space-x-4 mx-auto sm:mx-0 mt-1 sm:mt-0 font-extrabold text-black">
+            <a href="tel:+306970495155" class="hover:underline flex items-center gap-1 bg-black/10 px-2 py-0.5 rounded transition hover:bg-black hover:text-vice-cyan">
+                <i class="fa-solid fa-phone text-xs"></i> +30 6970495155
+            </a>
+            <a href="mailto:divanasad99@gmail.com" class="hover:underline flex items-center gap-1 bg-black/10 px-2 py-0.5 rounded transition hover:bg-black hover:text-vice-pink">
+                <i class="fa-solid fa-envelope text-xs"></i> divanasad99@gmail.com
+            </a>
+        </div>
+    </div>
+
+    <nav class="sticky top-0 z-40 bg-vice-dark/85 backdrop-blur-md border-b border-vice-pink/30 shadow-2xl">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Brand Logo -->
+                <a href="#" class="flex items-center space-x-3 group">
+                    <div class="relative">
+                        <span class="text-4xl sm:text-5xl font-black italic tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-vice-pink via-white to-vice-cyan drop-shadow-[0_0_10px_rgba(255,0,127,0.8)]">
+                            DIVAN
+                        </span>
+                        <span class="absolute -bottom-2 right-0 text-lg font-gtacursive text-vice-yellow drop-shadow-md">
+                            Vice City
+                        </span>
+                    </div>
+                    <div class="bg-gradient-to-br from-vice-pink to-vice-purple text-white font-black text-xl px-2.5 py-0.5 rounded-lg border border-vice-cyan/50 shadow-neon-pink group-hover:scale-110 transition">
+                        VI
+                    </div>
+                </a>
+
+                <!-- Desktop Nav Links -->
+                <div class="hidden md:flex items-center space-x-8 text-sm font-bold tracking-widest uppercase">
+                    <a href="#hero" class="hover:text-vice-pink transition duration-200">Home</a>
+                    <a href="#store" class="hover:text-vice-cyan transition duration-200">Store & Keys</a>
+                    <a href="#gallery" class="hover:text-vice-yellow transition duration-200">Official Art</a>
+                    <a href="#trailers" class="hover:text-vice-pink transition duration-200">Trailers</a>
+                    <a href="#contact" class="hover:text-vice-cyan transition duration-200">Contact Divan</a>
+                </div>
+
+                <!-- Right Action Buttons -->
+                <div class="flex items-center space-x-4">
+                    <!-- Quick Call / Contact Button -->
+                    <a href="tel:+306970495155" class="hidden lg:flex items-center gap-2 bg-gradient-to-r from-vice-purple to-vice-pink px-4 py-2 rounded-full font-bold text-xs uppercase tracking-wider hover:shadow-neon-pink transition transform hover:-translate-y-0.5 border border-white/20">
+                        <i class="fa-solid fa-headset text-sm"></i> Call Divan
+                    </a>
+
+                    <!-- Shopping Cart Button -->
+                    <button id="cartBtn" onclick="toggleCart()" class="relative p-3 bg-vice-card border border-vice-cyan/50 rounded-full hover:bg-vice-cyan/20 transition shadow-neon-cyan">
+                        <i class="fa-solid fa-cart-shopping text-vice-cyan text-lg"></i>
+                        <span id="cartCount" class="absolute -top-1 -right-1 bg-vice-pink text-white text-xs font-black w-5 h-5 rounded-full flex items-center justify-center border-2 border-vice-dark shadow-md">0</span>
+                    </button>
+
+                    <!-- Mobile Menu Toggle -->
+                    <button onclick="toggleMobileMenu()" class="md:hidden text-2xl text-vice-pink focus:outline-none p-2">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-vice-card border-b border-vice-pink/30 px-4 pt-2 pb-6 space-y-3 font-bold uppercase tracking-wider">
+            <a href="#hero" onclick="toggleMobileMenu()" class="block py-2 text-vice-pink">Home</a>
+            <a href="#store" onclick="toggleMobileMenu()" class="block py-2 text-white hover:text-vice-cyan">Store & Keys</a>
+            <a href="#gallery" onclick="toggleMobileMenu()" class="block py-2 text-white hover:text-vice-yellow">Official Art</a>
+            <a href="#trailers" onclick="toggleMobileMenu()" class="block py-2 text-white hover:text-vice-pink">Trailers</a>
+            <a href="#contact" onclick="toggleMobileMenu()" class="block py-2 text-white hover:text-vice-cyan">Contact Divan</a>
+            <div class="pt-2 border-t border-white/10 text-xs space-y-2 font-normal text-slate-300">
+                <p><i class="fa-solid fa-phone text-vice-cyan mr-2"></i>+30 6970495155</p>
+                <p><i class="fa-solid fa-envelope text-vice-pink mr-2"></i>divanasad99@gmail.com</p>
+            </div>
+        </div>
+    </nav>
+
+    <section id="hero" class="relative min-h-[85vh] flex items-center justify-center overflow-hidden py-12">
+        <!-- Background Hero Image with Neon Gradient Overlays -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://www.rockstargames.com/VI/_next/image?url=%2FVI%2F_next%2Fstatic%2Fmedia%2Fdesktop.910c8e19.jpg&w=3840&q=100" 
+                 alt="GTA VI Official Artwork" 
+                 class="w-full h-full object-cover object-center scale-105 filter brightness-75 contrast-110"
+                 onerror="this.src='https://placehold.co/1920x1080/150a2a/ff007f?text=Grand+Theft+Auto+VI+Official+Art'">
+            <div class="absolute inset-0 bg-gradient-to-t from-vice-dark via-vice-dark/60 to-transparent"></div>
+            <div class="absolute inset-0 bg-gradient-to-r from-vice-dark/90 via-transparent to-vice-dark/90"></div>
+        </div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 text-center">
+            <!-- Neon Pre-heading -->
+            <div class="inline-flex items-center space-x-2 bg-black/60 border border-vice-pink/50 rounded-full px-4 py-1.5 backdrop-blur-md mb-6 shadow-neon-pink">
+                <i class="fa-solid fa-star text-vice-yellow text-xs animate-spin"></i>
+                <span class="text-xs sm:text-sm font-black uppercase tracking-widest text-vice-cyan">
+                    Welcome to Vice City — Pre-Orders & Fan Store
+                </span>
+            </div>
+
+            <!-- Main Title Banner -->
+            <h1 class="text-5xl sm:text-7xl md:text-9xl font-black italic tracking-tighter uppercase drop-shadow-[0_10px_20px_rgba(0,0,0,0.8)]">
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-vice-pink via-white to-vice-cyan">GRAND THEFT AUTO</span>
+            </h1>
+            <div class="flex justify-center items-center gap-4 my-2">
+                <span class="text-3xl sm:text-5xl font-gtacursive text-vice-yellow -rotate-6 drop-shadow-lg">DIVAN VI Fan Hub</span>
+                <span class="text-4xl sm:text-6xl font-black text-vice-pink border-4 border-vice-pink px-4 py-1 rounded-2xl shadow-neon-pink rotate-3">VI</span>
+            </div>
+
+            <p class="max-w-2xl mx-auto text-slate-200 text-sm sm:text-lg font-medium mt-4 mb-8 drop-shadow">
+                Get your official GTA VI game keys, limited physical disc steelbooks, Vice City apparel, and exclusive collector merchandise directly from <strong>Divan Asad</strong>.
+            </p>
+
+            <!-- CTA Buttons -->
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                <a href="#store" class="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-vice-pink to-vice-purple text-white font-black uppercase tracking-wider text-base rounded-2xl shadow-neon-pink hover:scale-105 transition duration-300 border border-white/30 flex items-center justify-center gap-3">
+                    <i class="fa-solid fa-bag-shopping"></i> Explore Shop & Codes
+                </a>
+                <a href="#contact" class="w-full sm:w-auto px-8 py-4 bg-vice-dark/80 backdrop-blur-md border border-vice-cyan text-vice-cyan hover:bg-vice-cyan hover:text-black font-black uppercase tracking-wider text-base rounded-2xl shadow-neon-cyan hover:scale-105 transition duration-300 flex items-center justify-center gap-3">
+                    <i class="fa-solid fa-paper-plane"></i> Contact Divan Directly
+                </a>
+            </div>
+
+            <!-- Quick Direct Contact Strip -->
+            <div class="mt-12 inline-grid grid-cols-1 sm:grid-cols-2 gap-4 bg-black/70 backdrop-blur-lg border border-white/10 rounded-2xl p-4 text-left shadow-2xl max-w-xl mx-auto">
+                <div class="flex items-center space-x-3 border-b sm:border-b-0 sm:border-r border-white/10 pb-3 sm:pb-0 pr-2">
+                    <div class="w-10 h-10 rounded-xl bg-vice-pink/20 border border-vice-pink flex items-center justify-center text-vice-pink">
+                        <i class="fa-solid fa-phone"></i>
+                    </div>
+                    <div>
+                        <p class="text-[10px] text-slate-400 uppercase font-bold">Direct Phone / WhatsApp</p>
+                        <a href="tel:+306970495155" class="text-sm font-black text-white hover:text-vice-cyan transition">+30 6970495155</a>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-3 pl-2">
+                    <div class="w-10 h-10 rounded-xl bg-vice-cyan/20 border border-vice-cyan flex items-center justify-center text-vice-cyan">
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+                    <div>
+                        <p class="text-[10px] text-slate-400 uppercase font-bold">Official Email Support</p>
+                        <a href="mailto:divanasad99@gmail.com" class="text-sm font-black text-white hover:text-vice-pink transition">divanasad99@gmail.com</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="store" class="py-20 relative bg-gradient-to-b from-vice-dark via-vice-card to-vice-dark border-t border-vice-pink/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Section Header -->
+            <div class="text-center mb-16">
+                <h2 class="text-xs sm:text-sm uppercase tracking-widest text-vice-cyan font-extrabold mb-2">
+                    <i class="fa-solid fa-tag"></i> Official GTA VI Merch & Digital Media
+                </h2>
+                <h3 class="text-4xl sm:text-6xl font-black italic tracking-tight text-white uppercase">
+                    DIVAN <span class="text-transparent bg-clip-text bg-gradient-to-r from-vice-pink to-vice-yellow">STORE CATALOG</span>
+                </h3>
+                <p class="text-slate-400 max-w-xl mx-auto mt-3 text-sm">
+                    Pre-order original GTA VI game codes, physical steelbook disc editions, Vice City streetwear, and exclusive accessories.
+                </p>
+
+                <!-- Filter Category Tabs -->
+                <div class="flex flex-wrap justify-center gap-3 mt-8">
+                    <button onclick="filterProducts('all')" class="category-btn active px-5 py-2.5 rounded-xl text-xs font-black uppercase tracking-wider bg-vice-pink text-white shadow-neon-pink transition">All Items</button>
+                    <button onclick="filterProducts('codes')" class="category-btn px-5 py-2.5 rounded-xl text-xs font-black uppercase tracking-wider bg-vice-dark border border-white/20 text-slate-300 hover:border-vice-cyan transition">Game Codes & Discs</button>
+                    <button onclick="filterProducts('clothing')" class="category-btn px-5 py-2.5 rounded-xl text-xs font-black uppercase tracking-wider bg-vice-dark border border-white/20 text-slate-300 hover:border-vice-cyan transition">Clothing & Hoodies</button>
+                    <button onclick="filterProducts('accessories')" class="category-btn px-5 py-2.5 rounded-xl text-xs font-black uppercase tracking-wider bg-vice-dark border border-white/20 text-slate-300 hover:border-vice-cyan transition">Accessories & Collectibles</button>
+                </div>
+            </div>
+
+            <!-- Products Grid -->
+            <div id="productGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                <!-- Products will be dynamically populated via JS -->
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="py-20 relative bg-vice-dark border-t border-vice-cyan/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+                <div>
+                    <span class="text-xs font-black text-vice-yellow tracking-widest uppercase"><i class="fa-solid fa-camera"></i> Leonida & Vice City Stills</span>
+                    <h3 class="text-4xl sm:text-5xl font-black italic tracking-tight text-white uppercase mt-1">
+                        Official GTA VI <span class="text-vice-pink">Artwork Gallery</span>
+                    </h3>
+                </div>
+                <p class="text-slate-400 text-sm max-w-md mt-4 md:mt-0">
+                    High-definition official press screenshots and character posters featuring Lucia, Jason, and the Vice City skyline.
+                </p>
+            </div>
+
+            <!-- Artwork Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Art Card 1 -->
+                <div class="glass-card rounded-2xl overflow-hidden group relative cursor-pointer" onclick="openImageModal('https://www.rockstargames.com/VI/_next/image?url=%2FVI%2F_next%2Fstatic%2Fmedia%2Fdesktop.910c8e19.jpg&w=3840&q=100', 'Lucia & Jason - Vice City Skyline')">
+                    <img src="https://www.rockstargames.com/VI/_next/image?url=%2FVI%2F_next%2Fstatic%2Fmedia%2Fdesktop.910c8e19.jpg&w=3840&q=100" 
+                         alt="Lucia and Jason Official Art" 
+                         class="w-full h-64 object-cover group-hover:scale-110 transition duration-500"
+                         onerror="this.src='https://placehold.co/800x600/150a2a/ff007f?text=Lucia+%26+Jason+Official+Art'">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80 group-hover:opacity-90 transition"></div>
+                    <div class="absolute bottom-4 left-4 right-4">
+                        <span class="bg-vice-pink text-white text-[10px] font-black px-2 py-0.5 rounded uppercase">Key Art</span>
+                        <h4 class="text-lg font-bold text-white mt-1">Lucia & Jason - Main Poster</h4>
+                        <p class="text-xs text-slate-300">Official 4K Rockstar Release</p>
+                    </div>
+                </div>
+
+                <!-- Art Card 2 -->
+                <div class="glass-card rounded-2xl overflow-hidden group relative cursor-pointer" onclick="openImageModal('https://www.rockstargames.com/VI/_next/image?url=%2FVI%2F_next%2Fstatic%2Fmedia%2Fdesktop.61b9b4f4.jpg&w=3840&q=100', 'Lucia Artwork')">
+                    <img src="https://www.rockstargames.com/VI/_next/image?url=%2FVI%2F_next%2Fstatic%2Fmedia%2Fdesktop.61b9b4f4.jpg&w=3840&q=100" 
+                         alt="Lucia Poster" 
+                         class="w-full h-64 object-cover group-hover:scale-110 transition duration-500"
+                         onerror="this.src='https://placehold.co/800x600/150a2a/00f0ff?text=Lucia+Official+Artwork'">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80 group-hover:opacity-90 transition"></div>
+                    <div class="absolute bottom-4 left-4 right-4">
+                        <span class="bg-vice-cyan text-black text-[10px] font-black px-2 py-0.5 rounded uppercase">Character</span>
+                        <h4 class="text-lg font-bold text-white mt-1">Lucia - Vice City Protocol</h4>
+                        <p class="text-xs text-slate-300">Official Character Art</p>
+                    </div>
+                </div>
+
+                <!-- Art Card 3 -->
+                <div class="glass-card rounded-2xl overflow-hidden group relative cursor-pointer" onclick="openImageModal('https://www.rockstargames.com/VI/_next/image?url=%2FVI%2F_next%2Fstatic%2Fmedia%2Fdesktop.d8a5cf87.jpg&w=3840&q=100', 'Jason Artwork')">
+                    <img src="https://www.rockstargames.com/VI/_next/image?url=%2FVI%2F_next%2Fstatic%2Fmedia%2Fdesktop.d8a5cf87.jpg&w=3840&q=100" 
+                         alt="Jason Poster" 
+                         class="w-full h-64 object-cover group-hover:scale-110 transition duration-500"
+                         onerror="this.src='https://placehold.co/800x600/150a2a/ffdc00?text=Jason+Official+Artwork'">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80 group-hover:opacity-90 transition"></div>
+                    <div class="absolute bottom-4 left-4 right-4">
+                        <span class="bg-vice-yellow text-black text-[10px] font-black px-2 py-0.5 rounded uppercase">Character</span>
+                        <h4 class="text-lg font-bold text-white mt-1">Jason - Leonida Highway</h4>
+                        <p class="text-xs text-slate-300">Official Character Art</p>
+                    </div>
+                </div>
+
+                <!-- Art Card 4 -->
+                <div class="glass-card rounded-2xl overflow-hidden group relative cursor-pointer" onclick="openImageModal('https://www.rockstargames.com/VI/_next/image?url=%2FVI%2F_next%2Fstatic%2Fmedia%2Fdesktop.5db286f1.jpg&w=3840&q=100', 'Vice City Beach Sunset')">
+                    <img src="https://www.rockstargames.com/VI/_next/image?url=%2FVI%2F_next%2Fstatic%2Fmedia%2Fdesktop.5db286f1.jpg&w=3840&q=100" 
+                         alt="Vice City Beach Sunset" 
+                         class="w-full h-64 object-cover group-hover:scale-110 transition duration-500"
+                         onerror="this.src='https://placehold.co/800x600/150a2a/9d00ff?text=Vice+City+Beach+Sunset'">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80 group-hover:opacity-90 transition"></div>
+                    <div class="absolute bottom-4 left-4 right-4">
+                        <span class="bg-vice-purple text-white text-[10px] font-black px-2 py-0.5 rounded uppercase">Location</span>
+                        <h4 class="text-lg font-bold text-white mt-1">Ocean Drive Sunset</h4>
+                        <p class="text-xs text-slate-300">Vice City Beachfront Landscape</p>
+                    </div>
+                </div>
+
+                <!-- Art Card 5 -->
+                <div class="glass-card rounded-2xl overflow-hidden group relative cursor-pointer" onclick="openImageModal('https://www.rockstargames.com/VI/_next/image?url=%2FVI%2F_next%2Fstatic%2Fmedia%2Fdesktop.6053c6d9.jpg&w=3840&q=100', 'Leonida Keys Speedboat')">
+                    <img src="https://www.rockstargames.com/VI/_next/image?url=%2FVI%2F_next%2Fstatic%2Fmedia%2Fdesktop.6053c6d9.jpg&w=3840&q=100" 
+                         alt="Leonida Keys" 
+                         class="w-full h-64 object-cover group-hover:scale-110 transition duration-500"
+                         onerror="this.src='https://placehold.co/800x600/150a2a/00f0ff?text=Leonida+Keys+Action'">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80 group-hover:opacity-90 transition"></div>
+                    <div class="absolute bottom-4 left-4 right-4">
+                        <span class="bg-vice-cyan text-black text-[10px] font-black px-2 py-0.5 rounded uppercase">Vehicles</span>
+                        <h4 class="text-lg font-bold text-white mt-1">Leonida Keys Offshore</h4>
+                        <p class="text-xs text-slate-300">Official High-Speed Waterways</p>
+                    </div>
+                </div>
+
+                <!-- Art Card 6 -->
+                <div class="glass-card rounded-2xl overflow-hidden group relative cursor-pointer" onclick="openImageModal('https://www.rockstargames.com/VI/_next/image?url=%2FVI%2F_next%2Fstatic%2Fmedia%2Fjason.5001c96b.jpg&w=3840&q=100', 'The Robbery - Store Getaway')">
+                    <img src="https://www.rockstargames.com/VI/_next/image?url=%2FVI%2F_next%2Fstatic%2Fmedia%2Fjason.5001c96b.jpg&w=3840&q=100" 
+                         alt="Store Robbery Getaway" 
+                         class="w-full h-64 object-cover group-hover:scale-110 transition duration-500"
+                         onerror="this.src='https://placehold.co/800x600/150a2a/ff007f?text=Vice+City+Getaway'">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80 group-hover:opacity-90 transition"></div>
+                    <div class="absolute bottom-4 left-4 right-4">
+                        <span class="bg-vice-pink text-white text-[10px] font-black px-2 py-0.5 rounded uppercase">Action</span>
+                        <h4 class="text-lg font-bold text-white mt-1">The Getaway Car</h4>
+                        <p class="text-xs text-slate-300">Official Robbery Key Art</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="trailers" class="py-20 relative bg-vice-card/60 border-t border-vice-pink/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <span class="text-xs font-black text-vice-pink tracking-widest uppercase"><i class="fa-solid fa-film"></i> Official Video Showcase</span>
+                <h3 class="text-4xl sm:text-5xl font-black italic tracking-tight text-white uppercase mt-1">
+                    GTA VI <span class="text-vice-cyan">Official Trailers</span>
+                </h3>
+            </div>
+
+            <!-- Video Player Card -->
+            <div class="max-w-4xl mx-auto glass-card rounded-3xl p-4 sm:p-6 border border-vice-pink/40 shadow-2xl relative overflow-hidden">
+                <div class="relative w-full aspect-video rounded-2xl overflow-hidden bg-black group">
+                    <img src="https://www.rockstargames.com/VI/_next/image?url=%2FVI%2F_next%2Fstatic%2Fmedia%2Fdesktop.910c8e19.jpg&w=3840&q=100" 
+                         alt="GTA VI Trailer 1 Thumbnail" 
+                         class="w-full h-full object-cover group-hover:scale-105 transition duration-500 opacity-80"
+                         onerror="this.src='https://placehold.co/1280x720/150a2a/ff007f?text=Grand+Theft+Auto+VI+Trailer+1'">
+                    
+                    <div class="absolute inset-0 flex items-center justify-center bg-black/40 group-hover:bg-black/20 transition">
+                        <button onclick="openTrailerModal('https://www.youtube.com/embed/QdBZY2fkU-0')" class="w-20 h-20 sm:w-24 sm:h-24 bg-gradient-to-r from-vice-pink to-vice-purple text-white rounded-full flex items-center justify-center shadow-neon-pink group-hover:scale-110 transition transform">
+                            <i class="fa-solid fa-play text-2xl sm:text-3xl ml-1"></i>
+                        </button>
+                    </div>
+                    <div class="absolute bottom-4 left-4 right-4 flex justify-between items-center text-xs sm:text-sm font-bold bg-black/70 p-3 rounded-xl backdrop-blur-md">
+                        <div>
+                            <p class="text-white">Grand Theft Auto VI Trailer 1</p>
+                            <p class="text-slate-400 font-normal text-xs">Rockstar Games Official Reveal</p>
+                        </div>
+                        <span class="bg-vice-pink px-2.5 py-1 rounded text-white text-[10px] uppercase font-black">4K UHD</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-20 relative bg-vice-dark border-t border-vice-yellow/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <!-- Direct Contact Information Box -->
+                <div class="glass-card p-8 sm:p-10 rounded-3xl border border-vice-cyan/40 shadow-2xl relative overflow-hidden">
+                    <div class="absolute top-0 right-0 bg-gradient-to-l from-vice-cyan to-transparent w-32 h-32 opacity-10 rounded-bl-full"></div>
+                    
+                    <span class="text-xs font-black text-vice-yellow uppercase tracking-widest">Store Operator & Sales</span>
+                    <h3 class="text-3xl sm:text-5xl font-black italic uppercase text-white mt-1 mb-6">
+                        Get In Touch With <span class="text-vice-pink">Divan</span>
+                    </h3>
+                    <p class="text-slate-300 text-sm sm:text-base leading-relaxed mb-8">
+                        Have questions about physical disc codes, custom apparel sizing, or pre-order deliveries? Reach out directly via WhatsApp, phone, or email for instant support.
+                    </p>
+
+                    <div class="space-y-6">
+                        <!-- Phone Card -->
+                        <a href="tel:+306970495155" class="flex items-center space-x-4 p-4 rounded-2xl bg-vice-dark/80 border border-vice-pink/30 hover:border-vice-pink transition group">
+                            <div class="w-14 h-14 rounded-2xl bg-vice-pink/20 border border-vice-pink flex items-center justify-center text-vice-pink text-xl group-hover:scale-110 transition">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs font-bold text-slate-400 uppercase">Phone & WhatsApp</p>
+                                <p class="text-xl font-black text-white group-hover:text-vice-pink transition">+30 6970495155</p>
+                                <p class="text-[11px] text-vice-cyan">(Available 24/7 for Orders)</p>
+                            </div>
+                        </a>
+
+                        <!-- Email Card -->
+                        <a href="mailto:divanasad99@gmail.com" class="flex items-center space-x-4 p-4 rounded-2xl bg-vice-dark/80 border border-vice-cyan/30 hover:border-vice-cyan transition group">
+                            <div class="w-14 h-14 rounded-2xl bg-vice-cyan/20 border border-vice-cyan flex items-center justify-center text-vice-cyan text-xl group-hover:scale-110 transition">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs font-bold text-slate-400 uppercase">Email Address</p>
+                                <p class="text-lg sm:text-xl font-black text-white group-hover:text-vice-cyan transition">divanasad99@gmail.com</p>
+                                <p class="text-[11px] text-vice-pink">(Fast Email Response)</p>
+                            </div>
+                        </a>
+
+                        <!-- Location / Base Card -->
+                        <div class="flex items-center space-x-4 p-4 rounded-2xl bg-vice-dark/80 border border-white/10">
+                            <div class="w-14 h-14 rounded-2xl bg-vice-yellow/20 border border-vice-yellow flex items-center justify-center text-vice-yellow text-xl">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs font-bold text-slate-400 uppercase">Store Distribution Hub</p>
+                                <p class="text-base font-black text-white">Thessaloniki, Greece</p>
+                                <p class="text-[11px] text-slate-400">Worldwide Digital Delivery & Express Shipping</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Direct Inquiry Form -->
+                <div class="glass-card p-8 sm:p-10 rounded-3xl border border-vice-pink/40 shadow-2xl">
+                    <h4 class="text-2xl font-black text-white uppercase mb-2">Send Divan a Message</h4>
+                    <p class="text-slate-400 text-xs mb-6">Fill out this quick form and Divan will reply to your email or WhatsApp promptly.</p>
+
+                    <form onsubmit="handleContactSubmit(event)" class="space-y-4">
+                        <div>
+                            <label class="block text-xs font-bold uppercase text-slate-300 mb-1">Your Name</label>
+                            <input type="text" required placeholder="e.g. Alex Vice" class="w-full bg-vice-dark border border-white/20 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-vice-pink transition">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold uppercase text-slate-300 mb-1">Your Email</label>
+                            <input type="email" required placeholder="name@example.com" class="w-full bg-vice-dark border border-white/20 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-vice-cyan transition">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold uppercase text-slate-300 mb-1">Inquiry / Product Code Request</label>
+                            <textarea rows="4" required placeholder="Ask about GTA VI disc codes, hoodies, or order status..." class="w-full bg-vice-dark border border-white/20 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-vice-pink transition"></textarea>
+                        </div>
+                        <button type="submit" class="w-full py-4 bg-gradient-to-r from-vice-pink via-vice-purple to-vice-cyan text-white font-black uppercase tracking-wider rounded-xl shadow-neon-pink hover:scale-[1.02] transition">
+                            <i class="fa-solid fa-paper-plane mr-2"></i> Submit Message to Divan
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-black border-t border-vice-pink/30 py-12 text-slate-400 text-xs">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <!-- Logo & Owner -->
+                <div class="text-center md:text-left">
+                    <div class="flex items-center justify-center md:justify-start space-x-2">
+                        <span class="text-3xl font-black italic tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-vice-pink to-vice-cyan">DIVAN VI</span>
+                        <span class="bg-vice-pink text-white font-black text-xs px-2 py-0.5 rounded">STORE</span>
+                    </div>
+                    <p class="mt-2 text-slate-400">Operated by <strong>Divan Asad</strong> | Thessaloniki, Greece</p>
+                    <p class="text-[11px] text-slate-400 mt-1">Phone: +30 6970495155 | Email: divanasad99@gmail.com</p>
+                </div>
+
+                <!-- Navigation Quick Links -->
+                <div class="flex flex-wrap justify-center gap-6 font-bold uppercase tracking-wider text-xs">
+                    <a href="#hero" class="hover:text-vice-pink transition">Home</a>
+                    <a href="#store" class="hover:text-vice-cyan transition">Store</a>
+                    <a href="#gallery" class="hover:text-vice-yellow transition">Art Gallery</a>
+                    <a href="#contact" class="hover:text-vice-pink transition">Contact</a>
+                </div>
+
+                <!-- Social Icons -->
+                <div class="flex space-x-4">
+                    <a href="https://wa.me/306970495155" target="_blank" class="w-10 h-10 rounded-full bg-vice-card border border-vice-pink/40 flex items-center justify-center text-vice-pink hover:bg-vice-pink hover:text-white transition shadow-neon-pink">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                    </a>
+                    <a href="mailto:divanasad99@gmail.com" class="w-10 h-10 rounded-full bg-vice-card border border-vice-cyan/40 flex items-center justify-center text-vice-cyan hover:bg-vice-cyan hover:text-black transition shadow-neon-cyan">
+                        <i class="fa-solid fa-envelope text-lg"></i>
+                    </a>
+                    <a href="tel:+306970495155" class="w-10 h-10 rounded-full bg-vice-card border border-vice-yellow/40 flex items-center justify-center text-vice-yellow hover:bg-vice-yellow hover:text-black transition">
+                        <i class="fa-solid fa-phone text-lg"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="mt-8 pt-6 border-t border-white/10 text-center text-[11px] text-slate-400">
+                <p>This website is an independent fan store operated by Divan Asad. Grand Theft Auto, GTA VI, Vice City, and Rockstar Games are registered trademarks of Take-Two Interactive Software, Inc.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cart Sidebar Overlay -->
+    <div id="cartOverlay" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden transition-opacity duration-300" onclick="toggleCart()"></div>
+    
+    <!-- Cart Drawer -->
+    <div id="cartDrawer" class="fixed top-0 right-0 w-full sm:w-96 h-full bg-vice-card border-l border-vice-pink/40 z-50 transform translate-x-full transition duration-300 flex flex-col">
+        <div class="p-6 border-b border-white/10 flex justify-between items-center bg-vice-dark">
+            <h3 class="text-xl font-black uppercase text-white flex items-center gap-2">
+                <i class="fa-solid fa-cart-shopping text-vice-pink"></i> Your Vice Cart
+            </h3>
+            <button onclick="toggleCart()" class="text-slate-400 hover:text-white text-2xl">&times;</button>
+        </div>
+
+        <div id="cartItems" class="flex-1 overflow-y-auto p-6 space-y-4">
+            <!-- Cart items added dynamically -->
+        </div>
+
+        <div class="p-6 border-t border-white/10 bg-vice-dark space-y-4">
+            <div class="flex justify-between items-center text-lg font-black">
+                <span>Total Amount:</span>
+                <span id="cartTotal" class="text-vice-cyan">€0.00</span>
+            </div>
+            <button onclick="checkout()" class="w-full py-4 bg-gradient-to-r from-vice-pink to-vice-purple text-white font-black uppercase tracking-wider rounded-xl shadow-neon-pink hover:scale-105 transition">
+                Proceed To Order
+            </button>
+            <p class="text-[10px] text-center text-slate-400">Direct order confirmation sent to Divan Asad (+30 6970495155)</p>
+        </div>
+    </div>
+
+    <!-- Image Lightbox Modal -->
+    <div id="imageModal" class="fixed inset-0 bg-black/90 z-50 hidden flex items-center justify-center p-4" onclick="closeImageModal()">
+        <div class="relative max-w-5xl w-full" onclick="event.stopPropagation()">
+            <button onclick="closeImageModal()" class="absolute -top-10 right-0 text-white text-3xl hover:text-vice-pink">&times;</button>
+            <img id="modalImage" src="" alt="Enlarged Artwork" class="w-full h-auto max-h-[80vh] object-contain rounded-2xl border border-vice-cyan/50 shadow-neon-cyan">
+            <p id="modalCaption" class="text-center text-white font-bold text-lg mt-4"></p>
+        </div>
+    </div>
+
+    <!-- Trailer Video Modal -->
+    <div id="trailerModal" class="fixed inset-0 bg-black/95 z-50 hidden flex items-center justify-center p-4" onclick="closeTrailerModal()">
+        <div class="relative max-w-4xl w-full aspect-video" onclick="event.stopPropagation()">
+            <button onclick="closeTrailerModal()" class="absolute -top-10 right-0 text-white text-3xl hover:text-vice-pink">&times;</button>
+            <iframe id="trailerFrame" class="w-full h-full rounded-2xl border border-vice-pink/50 shadow-neon-pink" src="" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <!-- Notification Toast -->
+    <div id="toast" class="fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 transition duration-300 bg-vice-dark border border-vice-pink text-white px-6 py-4 rounded-2xl shadow-neon-pink flex items-center space-x-3">
+        <i class="fa-solid fa-circle-check text-vice-pink text-xl"></i>
+        <span id="toastMsg" class="font-bold text-sm"></span>
+    </div>
+
+    <script>
+        // Official Products Data
+        const products = [
+            {
+                id: 1,
+                name: "GTA VI PS5 Game Disc Code",
+                category: "codes",
+                price: 79.99,
+                badge: "Digital Code",
+                image: "https://www.rockstargames.com/VI/_next/image?url=%2FVI%2F_next%2Fstatic%2Fmedia%2Fdesktop.910c8e19.jpg&w=3840&q=100",
+                desc: "Instant digital activation code for PlayStation 5. Full GTA VI game access on launch day."
+            },
+            {
+                id: 2,
+                name: "GTA VI Xbox Series X Code",
+                category: "codes",
+                price: 79.99,
+                badge: "Digital Code",
+                image: "https://www.rockstargames.com/VI/_next/image?url=%2FVI%2F_next%2Fstatic%2Fmedia%2Fjason.5001c96b.jpg&w=3840&q=100",
+                desc: "Official Xbox Series X|S digital license code with Vice City bonus pre-order pack."
+            },
+            {
+                id: 3,
+                name: "Vice City Vice-Savage Oversized Hoodie",
+                category: "clothing",
+                price: 64.99,
+                badge: "Official Apparel",
+                image: "https://www.rockstargames.com/VI/_next/image?url=%2FVI%2F_next%2Fstatic%2Fmedia%2Fdesktop.61b9b4f4.jpg&w=3840&q=100",
+                desc: "Premium 400GSM cotton streetwear hoodie with embroidered Vice City pink gradient logo."
+            },
+            {
+                id: 4,
+                name: "Lucia & Jason Steelbook Collector Edition",
+                category: "codes",
+                price: 119.99,
+                badge: "Physical Collector",
+                image: "https://www.rockstargames.com/VI/_next/image?url=%2FVI%2F_next%2Fstatic%2Fmedia%2Fdesktop.910c8e19.jpg&w=3840&q=100",
+                desc: "Metallic steelbook disc case, Leonida map poster, collectible coins, and full game disc."
+            },
+            {
+                id: 5,
+                name: "Leonida Keys Neon Graphic Tee",
+                category: "clothing",
+                price: 34.99,
+                badge: "New Release",
+                image: "https://www.rockstargames.com/VI/_next/image?url=%2FVI%2F_next%2Fstatic%2Fmedia%2Fdesktop.d8a5cf87.jpg&w=3840&q=100",
+                desc: "100% organic cotton graphic t-shirt featuring Vice City palm sunset artwork."
+            },
+            {
+                id: 6,
+                name: "Vice City Sunset LED Desk Lamp",
+                category: "accessories",
+                price: 49.99,
+                badge: "Merch",
+                image: "https://www.rockstargames.com/VI/_next/image?url=%2FVI%2F_next%2Fstatic%2Fmedia%2Fdesktop.5db286f1.jpg&w=3840&q=100",
+                desc: "Custom acrylic RGB neon desk lamp with VI logo and adjustable Vice pink/cyan glow."
+            },
+            {
+                id: 7,
+                name: "Official GTA VI Metal Keychain & Lanyard",
+                category: "accessories",
+                price: 19.99,
+                badge: "Accessory",
+                image: "https://www.rockstargames.com/VI/_next/image?url=%2FVI%2F_next%2Fstatic%2Fmedia%2Fdesktop.6053c6d9.jpg&w=3840&q=100",
+                desc: "Heavy-duty brushed stainless steel GTA VI logo keychain with Vice City woven lanyard."
+            },
+            {
+                id: 8,
+                name: "Vice City Ocean Drive Snapback Cap",
+                category: "clothing",
+                price: 29.99,
+                badge: "Headwear",
+                image: "https://www.rockstargames.com/VI/_next/image?url=%2FVI%2F_next%2Fstatic%2Fmedia%2Fdesktop.61b9b4f4.jpg&w=3840&q=100",
+                desc: "Adjustable snapback hat with embroidered VI logo and Vice pink under-brim."
+            }
+        ];
+
+        let cart = [];
+
+        // Render Product Cards
+        function renderProducts(items) {
+            const grid = document.getElementById('productGrid');
+            grid.innerHTML = items.map(p => `
+                <div class="glass-card rounded-3xl p-5 flex flex-col justify-between group relative transition duration-300 hover:-translate-y-2">
+                    <div class="relative rounded-2xl overflow-hidden mb-4 aspect-square bg-vice-dark">
+                        <img src="${p.image}" alt="${p.name}" class="w-full h-full object-cover group-hover:scale-108 transition duration-500" onerror="this.src='https://placehold.co/400x400/150a2a/ff007f?text=${encodeURIComponent(p.name)}'">
+                        <span class="absolute top-3 left-3 bg-vice-pink/90 text-white text-[10px] font-black px-2.5 py-1 rounded-full uppercase tracking-wider border border-white/20">${p.badge}</span>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-extrabold text-white group-hover:text-vice-cyan transition leading-snug">${p.name}</h4>
+                        <p class="text-xs text-slate-400 mt-2 line-clamp-2">${p.desc}</p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-white/10 flex items-center justify-between">
+                        <span class="text-2xl font-black text-vice-yellow">€${p.price.toFixed(2)}</span>
+                        <button onclick="addToCart(${p.id})" class="px-4 py-2.5 bg-gradient-to-r from-vice-pink to-vice-purple hover:from-vice-cyan hover:to-vice-purple text-white hover:text-black font-black text-xs uppercase tracking-wider rounded-xl transition shadow-neon-pink">
+                            <i class="fa-solid fa-plus mr-1"></i> Add
+                        </button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // Filter Products
+        function filterProducts(category) {
+            document.querySelectorAll('.category-btn').forEach(btn => {
+                btn.classList.remove('bg-vice-pink', 'text-white', 'shadow-neon-pink');
+                btn.classList.add('bg-vice-dark', 'text-slate-300');
+            });
+            event.target.classList.add('bg-vice-pink', 'text-white', 'shadow-neon-pink');
+            event.target.classList.remove('bg-vice-dark', 'text-slate-300');
+
+            if (category === 'all') {
+                renderProducts(products);
+            } else {
+                renderProducts(products.filter(p => p.category === category));
+            }
+        }
+
+        // Shopping Cart Logic
+        function addToCart(productId) {
+            const item = products.find(p => p.id === productId);
+            const existing = cart.find(i => i.id === productId);
+            if (existing) {
+                existing.qty++;
+            } else {
+                cart.push({ ...item, qty: 1 });
+            }
+            updateCart();
+            showToast(`Added "${item.name}" to cart!`);
+        }
+
+        function updateCart() {
+            const cartItems = document.getElementById('cartItems');
+            const cartCount = document.getElementById('cartCount');
+            const cartTotal = document.getElementById('cartTotal');
+
+            const totalQty = cart.reduce((sum, item) => sum + item.qty, 0);
+            const totalPrice = cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
+
+            cartCount.textContent = totalQty;
+            cartTotal.textContent = `€${totalPrice.toFixed(2)}`;
+
+            if (cart.length === 0) {
+                cartItems.innerHTML = `
+                    <div class="text-center py-12 text-slate-400">
+                        <i class="fa-solid fa-basket-shopping text-4xl mb-3 text-vice-pink"></i>
+                        <p class="font-bold">Your cart is empty</p>
+                        <p class="text-xs mt-1">Browse the store and add Vice City merchandise!</p>
+                    </div>
+                `;
+            } else {
+                cartItems.innerHTML = cart.map(item => `
+                    <div class="flex items-center justify-between p-3 rounded-2xl bg-vice-dark border border-white/10">
+                        <div class="flex items-center space-x-3">
+                            <img src="${item.image}" alt="${item.name}" class="w-12 h-12 object-cover rounded-xl border border-vice-pink/30">
+                            <div>
+                                <h5 class="text-xs font-bold text-white line-clamp-1">${item.name}</h5>
+                                <p class="text-xs text-vice-yellow font-black">€${(item.price * item.qty).toFixed(2)}</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <button onclick="changeQty(${item.id}, -1)" class="w-6 h-6 rounded bg-vice-card border border-white/20 text-white font-bold text-xs flex items-center justify-center">-</button>
+                            <span class="text-xs font-black text-white">${item.qty}</span>
+                            <button onclick="changeQty(${item.id}, 1)" class="w-6 h-6 rounded bg-vice-card border border-white/20 text-white font-bold text-xs flex items-center justify-center">+</button>
+                        </div>
+                    </div>
+                `).join('');
+            }
+        }
+
+        function changeQty(id, delta) {
+            const item = cart.find(i => i.id === id);
+            if (item) {
+                item.qty += delta;
+                if (item.qty <= 0) {
+                    cart = cart.filter(i => i.id !== id);
+                }
+            }
+            updateCart();
+        }
+
+        function toggleCart() {
+            const drawer = document.getElementById('cartDrawer');
+            const overlay = document.getElementById('cartOverlay');
+            drawer.classList.toggle('translate-x-full');
+            overlay.classList.toggle('hidden');
+        }
+
+        function checkout() {
+            if (cart.length === 0) {
+                showToast("Your cart is empty!");
+                return;
+            }
+            const orderSummary = cart.map(i => `${i.name} (x${i.qty})`).join(', ');
+            const total = cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
+            
+            const whatsappMsg = encodeURIComponent(`Hi Divan! I want to order from DIVAN VI Store:\n${orderSummary}\nTotal: €${total.toFixed(2)}`);
+            window.open(`https://wa.me/306970495155?text=${whatsappMsg}`, '_blank');
+        }
+
+        function toggleMobileMenu() {
+            document.getElementById('mobileMenu').classList.toggle('hidden');
+        }
+
+        function openImageModal(src, title) {
+            document.getElementById('modalImage').src = src;
+            document.getElementById('modalCaption').textContent = title;
+            document.getElementById('imageModal').classList.remove('hidden');
+        }
+
+        function closeImageModal() {
+            document.getElementById('imageModal').classList.add('hidden');
+        }
+
+        function openTrailerModal(url) {
+            document.getElementById('trailerFrame').src = url + "?autoplay=1";
+            document.getElementById('trailerModal').classList.remove('hidden');
+        }
+
+        function closeTrailerModal() {
+            document.getElementById('trailerFrame').src = "";
+            document.getElementById('trailerModal').classList.add('hidden');
+        }
+
+        function handleContactSubmit(e) {
+            e.preventDefault();
+            showToast("Message sent to Divan! We will contact you soon.");
+            e.target.reset();
+        }
+
+        function showToast(msg) {
+            const toast = document.getElementById('toast');
+            document.getElementById('toastMsg').textContent = msg;
+            toast.classList.remove('translate-y-20', 'opacity-0');
+            setTimeout(() => {
+                toast.classList.add('translate-y-20', 'opacity-0');
+            }, 3000);
+        }
+
+        // Initialize Page
+        window.onload = function() {
+            renderProducts(products);
+            updateCart();
+        };
+    </script>
+</body>
+</html>
